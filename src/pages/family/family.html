@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Family
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list *ngFor="let profile of profiles">
+    <ion-item color="none" (tap)="goToJosh(profile)">
+      <ion-avatar item-left>
+        <img [src]="profile?.ImageURL" />
+      </ion-avatar>
+      <h2>
+        {{profile?.profileName}}
+      </h2>
+    </ion-item>
+  </ion-list>
+  <button ion-button color="calm" block (tap)="goToCreateChildProfile()">
+    Add Family Member
+  </button>
+</ion-content>

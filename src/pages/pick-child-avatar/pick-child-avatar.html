@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center> Pick Child Avatar</ion-title>
+    
+  </ion-navbar> 
+</ion-header>
+<ion-content padding>
+  <h3 class="pickChildAvatar-heading">
+    Choose an avatar for {{profileName}}:
+  </h3>
+  <ion-list *ngFor ="let avatar of avatarList">
+    <ion-item (tap)="goToSetUpProfile(avatar)">
+      <ion-avatar item-left>
+        <img [src]="avatar.ImageURL" />
+      </ion-avatar>
+    </ion-item>
+  </ion-list>
+</ion-content>

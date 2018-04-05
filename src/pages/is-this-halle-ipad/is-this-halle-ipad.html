@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Is this {{deviceName}} ?
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-avatar item-left>
+        <img [src]="profileData?.ImageURL" />
+      </ion-avatar>
+      <h2>
+        {{profileData?.profileName}}
+      </h2>
+    </ion-item>
+  </ion-list>
+  <h3 class="isTheHalleIpad-heading"></h3>
+  <div>
+    <p class="isTheHalleIpad-heading">
+      Either way works great
+    </p>
+  </div>
+  <button ion-button outline color="calm" (tap)="goToStartPairingOnDevice()">
+    Yes
+  </button>
+  <button ion-button outline color="calm" (tap)="goToReadyPairingOffDevice()">
+    No
+  </button>
+</ion-content>

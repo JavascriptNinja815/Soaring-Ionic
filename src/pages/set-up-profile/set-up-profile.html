@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Set up Profile
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-avatar item-left>
+        <img [src]="profileData.ImageURL" />
+      </ion-avatar>
+      <h2>
+        {{profileData.profileName}}
+      </h2>
+    </ion-item>
+  </ion-list>
+  <div class="setUpProfile-spacer"></div>
+  <h3 class="setUpProfile-heading">
+    {{profileData.profileName}} is a:
+  </h3>
+  <div>
+    <ion-toolbar>
+      <ion-segment color="primary" [(ngModel)]="ageGroup" (ionChange)="onAgeChanged($event)">
+        <ion-segment-button value="KID">
+          KID
+        </ion-segment-button>
+        <ion-segment-button value="TEEN">
+          TEEN
+        </ion-segment-button>
+        <ion-segment-button value="YOUNG ADULT">
+          YOUNG ADULT
+        </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+  </div>
+  <div class="setUpProfile-spacer"></div>
+  <div>
+    <p class="setUpProfile-p">
+      This is used to set the initial filter settings which you can always customize later.
+    </p>
+  </div>
+  <button ion-button color="calm" block (tap)="goToSetInitialFilters()">
+    Next
+  </button>
+</ion-content>

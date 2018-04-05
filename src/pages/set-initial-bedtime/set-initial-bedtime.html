@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Set Initial Bedtime
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (tap)="goToSetInitialTimeLimits()">
+        Next
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-avatar item-left>
+        <img [src]="profileData?.ImageURL" />
+      </ion-avatar>
+      <h2>
+        {{profileData?.profileName}}
+      </h2>
+    </ion-item>
+  </ion-list>
+  <div class="setInitialBedtime-spacer"></div>
+  <h3 class="setInitialBedtime-heading">
+    Would you like to set a bedtime for {{profileData?.profileName}}?
+  </h3>
+  
+    <div>
+      <p class="setInitialBedtime-heading">
+        The internet will shut off at bedtime. You can always do this later.
+      </p>
+    </div>
+    <josh-bedtime></josh-bedtime>
+  <div class="setInitialBedtime-spacer-15"></div>
+
+</ion-content>
