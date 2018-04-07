@@ -38,9 +38,9 @@ export class JoshPage {
     this.navCtrl.push('JoshReportsPage');
   }
 
-  goToJoshFilters() {
+  goToJoshFilters(profileId) {
     // Navigate to the JoshFiltersPage
-    this.navCtrl.push('JoshFiltersPage');
+    this.navCtrl.push('JoshFiltersPage', {profileId: profileId});
   }
 
   goToJoshBedtime() {
@@ -61,5 +61,10 @@ export class JoshPage {
   goToStartPairing() {
     // Navigate to the StartPairingPage
     this.navCtrl.push('StartPairingPage');
+  }
+
+  goToLateBedtime() {
+    // Navigate to the StartPairingPage
+    this.navCtrl.push('RewardLateBedtimePage');
   }
 }
